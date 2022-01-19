@@ -43,47 +43,52 @@
 
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-bool repeat = true;
-int skydives = 0;
-int scubaDiveTime = 0;
+// bool repeat = true;
+// int skydives = 0;
+// int scubaDiveTime = 0;
 
 
-while (repeat)
-{
-    Console.WriteLine("-----------------------------------------------");
-    Console.WriteLine("Andrew's Adventure Menu");
-    Console.WriteLine("Enter a number for what you would like to do:");
+// while (repeat)
+// {
+//     Console.WriteLine("-----------------------------------------------");
+//     Console.WriteLine("Andrew's Adventure Menu");
+//     Console.WriteLine("Enter a number for what you would like to do:");
     
-    Console.WriteLine("1: Go Skydiving!");
-    Console.WriteLine("2: Go Scuba Diving!");
-    Console.WriteLine("3: Go to an Amusement Park");
-    Console.WriteLine("4: Go to Bed (this will exit program)");
+//     Console.WriteLine("1: Go Skydiving!");
+//     Console.WriteLine("2: Go Scuba Diving!");
+//     Console.WriteLine("3: Go to an Amusement Park");
+//     Console.WriteLine("4: Go to Bed (this will exit program)");
 
-    string menuInput = Console.ReadLine();
+//     string menuInput = Console.ReadLine();
 
-    switch(menuInput)
-    {
-        case "1":
-            skydives = skydives + 1;
-            Console.WriteLine($"Congradulations! You have gone skydiving {skydives} time(s)!");
-            break;
-        case "2":
-            Console.WriteLine("How many minutes did you scuba dive for?");
-            int scubaTime = Convert.ToInt32(Console.ReadLine());
-            scubaDiveTime = scubaDiveTime + scubaTime;
-            Console.WriteLine($"Nice! That makes {scubaDiveTime} minute(s) in total!");
-            break;
-        case "3":
-            Console.WriteLine("What did you ride?");
-            string amusementRide = Console.ReadLine();
-            Console.WriteLine($"{amusementRide} is a great ride!");
-            break;
-        case "4":
-            Console.WriteLine("Goodnight.");
-            repeat = false;
-            break;
-    }
+//     switch(menuInput)
+//     {
+//         case "1":
+//             skydives = skydives + 1;
+//             Console.WriteLine($"Congradulations! You have gone skydiving {skydives} time(s)!");
+//             break;
+//         case "2":
+//             Console.WriteLine("How many minutes did you scuba dive for?");
+//             int scubaTime = Convert.ToInt32(Console.ReadLine());
+//             scubaDiveTime = scubaDiveTime + scubaTime;
+//             Console.WriteLine($"Nice! That makes {scubaDiveTime} minute(s) in total!");
+//             break;
+//         case "3":
+//             Console.WriteLine("What did you ride?");
+//             string amusementRide = Console.ReadLine();
+//             Console.WriteLine($"{amusementRide} is a great ride!");
+//             break;
+//         case "4":
+//             Console.WriteLine("Goodnight.");
+//             repeat = false;
+//             break;
+//     }
 
-}
+// }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+using CollectionFunction;
+
+Collection collect = new Collection();
+
+collect.CollectionMain();
