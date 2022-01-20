@@ -63,11 +63,11 @@ while (repeat)
     
     Console.WriteLine("1: Go Skydiving!");
     Console.WriteLine("2: Go Scuba Diving!");
-    Console.WriteLine("3: Go to an Amusement Park");
-    Console.WriteLine("4: Print out your Amusement Park Ride List");
-    Console.WriteLine("5: Remove a ride from your Amusement Park Ride List");
-    Console.WriteLine("6: Search for a certain element in your Amusement Park Ride List");
-    Console.WriteLine("7: Go to Bed (this will exit program)");
+    Console.WriteLine("3: Go on an Amusement Park Ride!");
+    Console.WriteLine("4: Print out your Amusement Park Ride List.");
+    Console.WriteLine("5: Remove a ride from your Amusement Park Ride List.");
+    Console.WriteLine("6: Search for a certain element in your Amusement Park Ride List.");
+    Console.WriteLine("7: Go to Bed (this will exit program).");
 
     string menuInput = Console.ReadLine();
 
@@ -108,6 +108,9 @@ while (repeat)
             Console.WriteLine("Goodnight.");
             repeat = false;
             break;
+        default:
+            Console.WriteLine("You did not enter in a valid menu item. Please try again!");
+            break; 
     }
 
 }

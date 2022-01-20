@@ -82,7 +82,7 @@ namespace DataFunction
             //otherwise if the ride doesn't appear, then isThere is going to be false and you should tell them they did not go on that ride
             if (isThere == false)
             {
-                Console.WriteLine("This ride is currently not in your list anyways!");
+                Console.WriteLine("This ride is currently not in your list anyway!");
             }
             
         }
@@ -95,7 +95,7 @@ namespace DataFunction
             {
                 if(ride == item)
                 {
-                    Console.WriteLine($"You have gone on {ride}");
+                    Console.WriteLine($"You have gone on {ride}.");
                     isThere = true;
                     break;
                 }
@@ -104,7 +104,7 @@ namespace DataFunction
             //otherwise if the ride doesn't appear, then isThere is going to be false and you should tell them they did not go on that ride
             if (isThere == false)
             {
-                Console.WriteLine($"You have not gone on {ride}");
+                Console.WriteLine($"You have not gone on {ride}.");
             }
 
         }
