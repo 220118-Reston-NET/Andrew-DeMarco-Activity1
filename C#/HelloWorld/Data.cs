@@ -1,12 +1,13 @@
 using System.Collections;
+using SerializeFunction;
 
 namespace DataFunction
 {
-    public class Data
+
+    public class countedAdventures
     {
         private int _numOfSkydives;
         private int _totalScubaDiveTime;
-        private List<string> _amusementRidesList = new List<string>();
 
         public int Skydives
         {
@@ -32,10 +33,17 @@ namespace DataFunction
             _totalScubaDiveTime = _totalScubaDiveTime + time;
             return _totalScubaDiveTime;
         }
+    }
+
+    public class Data
+    {
+        
+        private List<string> _amusementRidesList = new List<string>();
 
         //Add amusement ride to list
         public void AddAmusementRideToList(string ride)
         {
+            _amusementRidesList = Serialize.SerialRead();
             bool isThere = false;
             //check to see if the ride is in the list if it is then break and say the user has gone on that ride
             foreach (string item in _amusementRidesList)
@@ -52,6 +60,7 @@ namespace DataFunction
             if (isThere == false)
             {
                 _amusementRidesList.Add(ride);
+                Serialize.SerialWriteList(ride);
             }
             
         }

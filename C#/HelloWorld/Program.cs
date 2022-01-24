@@ -3,6 +3,9 @@
 using ConversionFunction;
 using CollectionFunction;
 using DataFunction;
+using SerializationFunction;
+using SerializeFunction;
+using OOPFunction;
 
 // Console.WriteLine("Hello, World!");
 
@@ -46,74 +49,71 @@ using DataFunction;
 
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data userData = new Data()
-{
-    Skydives = 0,
-    ScubaDiveTime = 0
-};
+//bool repeat = true;
 
+// countedAdventures adventure1  = new countedAdventures(){
+//     Skydives = 0,
+//     ScubaDiveTime = 0
+// };
 
-bool repeat = true;
+// Data userData = new Data();
 
-while (repeat)
-{
-    Console.WriteLine("-----------------------------------------------");
-    Console.WriteLine("Andrew's Adventure Menu");
-    Console.WriteLine("Enter a number for what you would like to do:");
+// while (repeat)
+// {
+//     Console.WriteLine("-----------------------------------------------");
+//     Console.WriteLine("Andrew's Adventure Menu");
+//     Console.WriteLine("Enter a number for what you would like to do:");
     
-    Console.WriteLine("1: Go Skydiving!");
-    Console.WriteLine("2: Go Scuba Diving!");
-    Console.WriteLine("3: Go on an Amusement Park Ride!");
-    Console.WriteLine("4: Print out your Amusement Park Ride List.");
-    Console.WriteLine("5: Remove a ride from your Amusement Park Ride List.");
-    Console.WriteLine("6: Search for a certain element in your Amusement Park Ride List.");
-    Console.WriteLine("7: Go to Bed (this will exit program).");
+//     Console.WriteLine("1: Go Skydiving!");
+//     Console.WriteLine("2: Go Scuba Diving!");
+//     Console.WriteLine("3: Go on an Amusement Park Ride!");
+//     Console.WriteLine("4: Print out your Amusement Park Ride List.");
+//     Console.WriteLine("5: Remove a ride from your Amusement Park Ride List.");
+//     Console.WriteLine("6: Search for a certain element in your Amusement Park Ride List.");
+//     Console.WriteLine("7: Go to Bed (this will exit program).");
 
-    string menuInput = Console.ReadLine();
+//     string menuInput = Console.ReadLine();
 
-    switch(menuInput)
-    {
-        case "1":
-            Console.WriteLine("Congradulations! You have gone Skydiving " + userData.totalSkydives() + " Time(s)!");
-            break;
-        case "2":
-            Console.WriteLine("How many minutes did you scuba dive for?");
-            int scubaTime = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"Nice! That makes " + userData.totalScubaDiveTime(scubaTime) + " minute(s) in total!");
-            break;
-        case "3":
-            Console.WriteLine("What did you ride?");
-            string amusementRide = Console.ReadLine();
-            Console.WriteLine($"Nice! {amusementRide} was added to your list!");
-            userData.AddAmusementRideToList(amusementRide);
-            amusementRide = "";
-            break;
-        case "4":
-            Console.WriteLine("Here is your list of rides:");
-            userData.PrintAmusementRideList();
-            break;
-        case "5":
-            Console.WriteLine("What ride do you want to remove?");
-            amusementRide = Console.ReadLine();
-            userData.RemoveRideFromList(amusementRide);
-            amusementRide = "";
-            break;
-        case "6":
-            Console.WriteLine("What ride do you want to search for?");
-            amusementRide = Console.ReadLine();
-            userData.SearchForRide(amusementRide);
-            amusementRide = "";
-            break;
-        case "7":
-            Console.WriteLine("Goodnight.");
-            repeat = false;
-            break;
-        default:
-            Console.WriteLine("You did not enter in a valid menu item. Please try again!");
-            break; 
-    }
+//     switch(menuInput)
+//     {
+//         case "1":
+//             Console.WriteLine("Congradulations! You have gone Skydiving " + adventure1.totalSkydives() + " Time(s)!");
+//             break;
+//         case "2":
+//             Console.WriteLine("How many minutes did you scuba dive for?");
+//             int scubaTime = Convert.ToInt32(Console.ReadLine());
+//             Console.WriteLine($"Nice! That makes " + adventure1.totalScubaDiveTime(scubaTime) + " minute(s) in total!");
+//             break;
+//         case "3":
+//             Console.WriteLine("What did you ride?");
+//             string amusementRide = Console.ReadLine();
+//             Console.WriteLine($"Nice! {amusementRide} was added to your list!");
+//             userData.AddAmusementRideToList(amusementRide);
+//             break;
+//         case "4":
+//             Console.WriteLine("Here is your list of rides:");
+//             userData.PrintAmusementRideList();
+//             break;
+//         case "5":
+//             Console.WriteLine("What ride do you want to remove?");
+//             amusementRide = Console.ReadLine();
+//             userData.RemoveRideFromList(amusementRide);
+//             break;
+//         case "6":
+//             Console.WriteLine("What ride do you want to search for?");
+//             amusementRide = Console.ReadLine();
+//             userData.SearchForRide(amusementRide);
+//             break;
+//         case "7":
+//             Console.WriteLine("Goodnight.");
+//             repeat = false;
+//             break;
+//         default:
+//             Console.WriteLine("You did not enter in a valid menu item. Please try again!");
+//             break; 
+//     }
 
-}
+// }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -125,3 +125,7 @@ while (repeat)
 // Conversion conv1 = new Conversion();
 
 // Console.WriteLine(conv1.GiveMeNumber());
+
+//Serialization.SerialMain();
+
+OOP.OOPMain();
